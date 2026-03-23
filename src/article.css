@@ -1,7 +1,7 @@
 /* تحريري — صفحة المقال */
 
 .article-page {
-  max-width: 42rem;
+  max-width: 46rem;
   margin: 0 auto;
   padding-bottom: 5rem;
 }
@@ -75,17 +75,16 @@
 .article-h1 {
   font-family: 'Amiri', serif;
   font-weight: 700;
-  font-size: clamp(1.85rem, 5vw, 2.65rem);
+  font-size: clamp(2.05rem, 5.8vw, 3.1rem);
   line-height: 1.35;
   color: var(--white);
   margin-bottom: 1.5rem;
-  text-wrap: balance;
 }
 
 .article-dek {
   font-family: 'Tajawal', sans-serif;
-  font-size: clamp(1.08rem, 1rem + 0.35vw, 1.2rem);
-  line-height: 2.05;
+  font-size: clamp(1.2rem, 1.05rem + 0.45vw, 1.38rem);
+  line-height: 2.15;
   color: var(--gray);
   font-weight: 400;
   max-width: 36rem;
@@ -152,8 +151,8 @@
 
 .article-body {
   font-family: 'Amiri', serif;
-  font-size: clamp(1.28rem, 1.15rem + 0.55vw, 1.45rem);
-  line-height: 2.28;
+  font-size: clamp(1.52rem, 1.26rem + 0.75vw, 1.85rem);
+  line-height: 2.42;
   letter-spacing: 0.012em;
   color: rgba(237, 234, 227, 0.96);
   -webkit-font-smoothing: antialiased;
@@ -166,7 +165,7 @@
 
 .article-section-title {
   font-family: 'Tajawal', sans-serif;
-  font-size: clamp(0.98rem, 0.92rem + 0.2vw, 1.06rem);
+  font-size: clamp(1.05rem, 0.96rem + 0.3vw, 1.16rem);
   letter-spacing: 0.18em;
   color: var(--trust);
   margin: 2.75rem 0 1.35rem;
@@ -245,8 +244,8 @@
 
 .article-num-block {
   font-family: 'Amiri', serif;
-  font-size: clamp(1.22rem, 1.12rem + 0.4vw, 1.38rem);
-  line-height: 2.22;
+  font-size: clamp(1.36rem, 1.2rem + 0.5vw, 1.58rem);
+  line-height: 2.36;
   color: rgba(237, 234, 227, 0.96);
   margin: 0 0 1.45rem;
   white-space: pre-line;
@@ -282,10 +281,10 @@
 
 .article-h2-inline {
   font-family: 'Amiri', serif;
-  font-size: clamp(1.22rem, 1.1rem + 0.4vw, 1.38rem);
+  font-size: clamp(1.38rem, 1.2rem + 0.45vw, 1.62rem);
   font-weight: 700;
   color: var(--white);
-  line-height: 1.75;
+  line-height: 1.95;
 }
 
 .article-lead {
@@ -325,8 +324,8 @@
 }
 
 .article-opening-lines {
-  font-size: clamp(1.32rem, 1.2rem + 0.45vw, 1.48rem);
-  line-height: 2.2;
+  font-size: clamp(1.5rem, 1.28rem + 0.55vw, 1.78rem);
+  line-height: 2.34;
   color: rgba(237, 234, 227, 0.98);
   font-weight: 700;
   margin-bottom: 1.35rem;
@@ -461,5 +460,21 @@
   .article-pullquote {
     background: #f8f6f0;
     border-color: #c9a84c;
+  }
+}
+
+@media (max-width: 640px) {
+  .article-page {
+    max-width: 100%;
+  }
+
+  .article-body {
+    font-size: 1.38rem;
+    line-height: 2.3;
+  }
+
+  .article-dek {
+    font-size: 1.08rem;
+    line-height: 2;
   }
 }
