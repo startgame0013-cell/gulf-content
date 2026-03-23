@@ -1,16 +1,14 @@
 :root {
-  /* ميدان حرب: زيتون/فولاذ، ضباب بارد، صدأ — بلا ذهبي «دافئ» */
-  --gold: #7d8f82;
-  --gold-light: #a8b5aa;
-  --dark: #06080b;
-  --dark2: #0c1016;
-  --dark3: #141a22;
-  --red: #7a3328;
-  --red-soft: #b85c4a;
-  --white: #d4d8dc;
-  --gray: #6b737c;
-  /* للحدود الشفافة نفس درجة اللمعة */
-  --accent-rgb: 125, 143, 130;
+  --gold: #c9a84c;
+  --gold-light: #e8c96a;
+  --dark: #0a0a0f;
+  --dark2: #111118;
+  --dark3: #1a1a24;
+  --red: #c0392b;
+  --red-soft: #e74c3c;
+  --white: #f0ede6;
+  --gray: #8a8a9a;
+  --accent-rgb: 201, 168, 76;
 }
 
 *,
@@ -23,9 +21,6 @@
 
 body {
   background: var(--dark);
-  background-image:
-    radial-gradient(ellipse 100% 60% at 50% -15%, rgba(45, 55, 68, 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(90, 45, 38, 0.06) 0%, transparent 45%);
   color: var(--white);
   font-family: 'Cairo', sans-serif;
   min-height: 100vh;
@@ -67,9 +62,9 @@ body {
 }
 
 .app-nav button.active {
-  background: var(--gold);
-  color: var(--dark);
-  border-color: var(--gold);
+  background: #b4c4b8;
+  color: #0a0a0f;
+  border-color: #b4c4b8;
 }
 
 .draft-intro {
@@ -241,7 +236,7 @@ body {
 }
 
 .dot-snap {
-  background: #8a7a4a;
+  background: #fffc00;
 }
 
 .dot-twitter {
@@ -364,13 +359,13 @@ body {
 
 /* WARNING BOX */
 .warning-box {
-  background: rgba(90, 40, 32, 0.12);
-  border: 1px solid rgba(140, 60, 48, 0.35);
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.3);
   border-radius: 10px;
   padding: 16px 20px;
   margin: 16px 0;
   font-size: 15px;
-  color: #c49a90;
+  color: #e8a09a;
   font-family: 'Tajawal', sans-serif;
 }
 
@@ -407,6 +402,7 @@ body {
   color: var(--white);
   line-height: 1.9;
   font-size: 16px;
+  white-space: pre-line;
 }
 
 .thread-connector {
