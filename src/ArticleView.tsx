@@ -1,6 +1,5 @@
 import './article.css'
 
-/** المتن من «في قانون فيزيائي…» إلى «يُبنى عليه» — تحريري، دون ثريد ولا إشارة لسلسلة منشورات. */
 export function ArticleView() {
   return (
     <article className="article-page" dir="rtl" lang="ar">
@@ -11,8 +10,8 @@ export function ArticleView() {
           المشكلة والمرحلة الفاصلة: حين يصبح الصمت خياراً له ثمن
         </h1>
         <p className="article-dek">
-          قراءة هادئة لما يتغيّر في الإقليم وليس دعوة للذعر؛ بل محاولة لربط المشهد بما يمكن
-          أن نفعله محلياً قبل أن تُفرض علينا خيارات لا نملك تفاصيلها.
+          ليست هذه دعوةً للذعر، بل محاولة لقراءة ما يتغيّر في الإقليم بصوت هادئ: ربط المشهد بما يمكن أن نفعله
+          محلياً، قبل أن تُفرض خيارات لا نملك تفاصيلها ولا أدوات التأثير فيها.
         </p>
         <p className="article-byline">
           <span className="article-byline-main">
@@ -34,133 +33,136 @@ export function ArticleView() {
         <h2 className="article-section-title">المشكلة والخطر</h2>
 
         <p className="article-opening-lines">
-          في قانون فيزيائي كوني يقول:{'\n'}
-          أي شيء تتركه بدون اهتمام — يتحول من نظام إلى فوضى.
+          في الفيزياء، يُقال إن أي نظام يُهمل يميل إلى الفوضى؛ صياغةٌ تقنية، لكنها تصبح سياسية حين
+          يتراجع الاهتمام بالبنية والقواعد طويلة الأمد.
         </p>
         <p>
-          هذا القانون مو بس في العلم.{'\n'}
-          هو يصف <span className="article-hl">بالضبط</span> ما يحدث اليوم في الخليج.
+          وليس المقصود أن نُحوّل العلم إلى شعار؛ المقصود أن نلتقط تشابهاً دقيقاً: ما يحدث في الخليج
+          اليوم يشبه — <span className="article-hl">في شكل التراكم</span> — ما يحدث حين تضعف الطبقة
+          الاستراتيجية وتعلو الطبقة الانفعالية في اتخاذ القرار.
         </p>
         <p className="article-divider">— — —</p>
         <p>
-          سنوات من غياب التخطيط الحقيقي.{'\n'}
-          سنوات من القرار العاطفي بدل الاستراتيجي.{'\n'}
-          سنوات من الانتظار بدل المبادرة.
+          سنوات من غياب التخطيط الجاد، وسنوات من قرارات تُؤسَّس على الانفعال لا على خريطة واضحة،
+          وسنوات من تأجيل المبادرة إلى حين «ينصلح الحال» من تلقاء نفسه.
         </p>
         <p>
-          <span className="article-danger">والنتيجة؟</span>
+          <span className="article-danger">فما النتيجة؟</span>
           {'\n'}
-          نقطتان اليوم في <span className="article-danger">أسوأ أحوالهما</span> منذ تأسيس هذه الدول:
+          أن نقطتين محوريتين — <span className="article-danger">الأمن</span> و{' '}
+          <span className="article-danger">استقرار التدفق المالي</span> — تقفان اليوم في أسوأ أحوالهما
+          منذ تأسيس هذه الدول.
         </p>
-        <ul className="article-risk-points" aria-label="نقطتان محوريتان">
-          <li>الأمن</li>
-          <li>التدفق المالي</li>
-        </ul>
         <p className="article-divider">— — —</p>
 
-        <h2 className="article-section-title article-section-title--spaced">ليش وصلنا هنا؟</h2>
+        <h2 className="article-section-title article-section-title--spaced">لماذا نصل إلى هذا رغم الوفرة؟</h2>
         <p>
-          مو لأن عندنا نقص في المال أو الموارد.{'\n'}
-          بالعكس — الخليج من أغنى مناطق العالم.
+          ليس لأننا نفتقر إلى المال أو إلى الموارد؛ فالخليج، بالعكس، من أغنى بقاع الأرض.
         </p>
-        <p className="article-bridge">المشكلة الحقيقية:</p>
+        <p className="article-bridge">إنما المشكلة الحقيقية تكمن في ما يلي:</p>
         <ul className="article-key-points">
           <li>
             <span className="article-li-num">١</span>
-            <span>جيل قيادة فقد العمق الفكري والإداري تدريجياً</span>
+            <span>
+              تراجع عمق التكوين الفكري والإداري في أجيال قيادية، لا بصورة مفاجئة، بل تدريجياً وبمرور
+              الزمن.
+            </span>
           </li>
           <li>
             <span className="article-li-num">٢</span>
-            <span>قرارات تُتخذ بعاطفة ومصلحة آنية لا باستراتيجية</span>
+            <span>
+              هيمنة قرارات تُبنى على العاطفة والمصلحة الآنية، بدلاً من استراتيجية تتحمّل الاختبار
+              والمتابعة.
+            </span>
           </li>
           <li>
             <span className="article-li-num">٣</span>
-            <span>ردود أفعال بدل مبادرات — نتحرك لما يضغط علينا أحد فقط</span>
+            <span>
+              استبدال المبادرة بردود أفعال: نتحرك حين يضغط الخارج، ونصمت حين يخفّ الضغط.
+            </span>
           </li>
           <li>
             <span className="article-li-num">٤</span>
-            <span>مجلس تعاون موجود بالاسم، غايب بالفعل</span>
+            <span>
+              وجود أطر التعاون «على الورق» دون أن تترجم إلى تنسيق حقيقي في الملفات الحساسة.
+            </span>
           </li>
         </ul>
         <p className="article-divider">— — —</p>
         <p>
-          <span className="article-danger">الأخطر من كل هذا؟</span>
+          <span className="article-danger">وأخطر ما في الأمر:</span> أن يُعاد إنتاج المشهد تحت مسمّى
+          «المعالجة»، بينما تضعف أدوات الإصلاح ذاتها.
         </p>
 
         <h2 className="article-section-title article-section-title--spaced">الأسباب الخفية</h2>
         <p>
-          <strong className="article-h2-inline">الأخطر: اللي يحدث للخليج مو صدفة.</strong>
+          <strong className="article-h2-inline">ما يحدث للخليج ليس صدفة تاريخية عابرة.</strong>
         </p>
         <p>
-          في فرق كبير بين دولة تضعف من الداخل{'\n'}
-          وبين دولة <span className="article-danger">يُعمل على إضعافها من الخارج.</span>
-        </p>
-        <p>الخليج يعاني من الاثنين معاً.</p>
-        <p className="article-divider">— — —</p>
-        <p>
-          الانقسامات الداخلية لا تُحل — تُغذَّى.{'\n'}
-          الخلافات بين الدول لا تُعالج — تُشعَّل.{'\n'}
-          القيادات تُشغَل بمشاكل صغيرة بينما القرارات الكبيرة تُرسم في مكان آخر.
+          هناك فرقٌ جذري بين دولة تضعف من داخلها وبين دولة يُراد لها أن تُضعف{' '}
+          <span className="article-danger">من خارجها</span>؛ والخليج يواجه أحياناً الاثنين معاً، في
+          تداخل يصعّب قراءة المشهد من زاوية واحدة.
         </p>
         <p className="article-divider">— — —</p>
         <p>
-          والخليج؟{'\n'}
-          يرد على كل استفزاز.{'\n'}
-          يخاف من كل تهديد.{'\n'}
-          ينتظر بركة السماء.
+          فالانقسامات الداخلية لا تُعالَج فحسب؛ قد تُغذّى. والخلافات بين الدول لا تُطوى فحسب؛ قد
+          تُشعَل. وتبقى القيادة مشغولة بالصغير، بينما تُرسم الخطوط الكبرى في أماكن أخرى.
+        </p>
+        <p className="article-divider">— — —</p>
+        <p>
+          والنتيجة؟ منطقة تكثر فيها ردود الفعل، وتقلّ فيها المبادرة البناءة؛ تنتظر «فرجاً» قد لا
+          يأتي على مقاسها، بينما تستمر خططٌ أخرى — بصمتٍ أو بجهرٍ — في التقدم.
         </p>
         <p>
-          <span className="article-danger">بينما الخطة تُنفَّذ.</span>
+          <span className="article-danger">والخطة تُنفَّذ، حتى حين لا تُسمّى باسمها.</span>
         </p>
 
-        <h2 className="article-section-title article-section-title--spaced">النتائج إذا ما تحرك أحد</h2>
+        <h2 className="article-section-title article-section-title--spaced">النتائج إن بقي الجميع على الهامش</h2>
         <p>
-          <strong className="article-h2-inline">شنو يحدث لو استمر الوضع على ما هو عليه؟</strong>
+          <strong className="article-h2-inline">ماذا لو استمرّ الوضع على حاله؟</strong>
         </p>
         <p>
-          <span className="article-danger">المنتظر</span> — سيضيع لحظاته وهو ينتظر{'\n'}
-          <span className="article-danger">الخائف</span> — سيدفع ثمن مخاوفه بنفسه{'\n'}
-          <span className="article-danger">المتصارع</span> — سينجرح ويتألم ويخرج خاسراً{'\n'}
-          <span className="article-danger">العاطفي</span> — سيؤجج المشاعر ويزيد الفوضى{'\n'}
-          <span className="article-danger">المغرور بفرديته</span> — سيهدم أسواره بيده
+          <span className="article-danger">المنتظر</span> يضيع زمنه وهو ينتظر فرصة «أنسب» لا تأتي
+          دائماً.{'\n'}
+          <span className="article-danger">الخائف</span> يدفع ثمن مخاوفه بأيديه، لأنه يتنازل عن
+          مساحة القول والفعل.{'\n'}
+          <span className="article-danger">المتصارع شعبوياً</span> يخرج من المعركة وقد خسر الجمهور
+          والمشروع معاً.{'\n'}
+          <span className="article-danger">العاطفي بلا أدوات</span> يضخّ الحرارة دون بناء.{'\n'}
+          <span className="article-danger">والمغرور بفرديته</span> يظن أنه يحمي نفسه، وهو يهدم
+          سوراً جماعياً لا يُعاد بسهولة.
         </p>
         <p className="article-divider">— — —</p>
         <p>
-          هذه مو تحليلات.{'\n'}
-          هذه <span className="article-hl">أنماط تتكرر</span> في كل مجتمع ترك نفسه بدون رؤية.
+          هذه ليست «تحليلات» ترفيهية؛ إنها <span className="article-hl">أنماطٌ تتكرر</span> حيثما غابت
+          الرؤية وضعفت المؤسسة.
         </p>
         <p className="article-divider">— — —</p>
         <p>
-          الخيار الأول: تتحرك اليوم.{'\n'}
-          <span className="article-danger">الخيار الثاني: يُتخذ عنك.</span>
+          وإزاء ذلك، يبقى خياران لا ثالث لهما: إما أن تتحرك اليوم بما تملك، وإما أن تُتخذ عنك
+          قراراتٌ ثم تُعرض عليك كأمرٍ واقع.{'\n'}
+          <span className="article-danger">والفرق بينهما ليس شعاراً؛ بل مساحة زمكانية ضيّقة.</span>
         </p>
 
         <h2 className="article-section-title article-section-title--spaced">الحل والمطلوب</h2>
         <p>
-          <strong className="article-h2-inline">الحل موجود — لكنه يحتاج شجاعة.</strong>
+          <strong className="article-h2-inline">الحل ليس مستحيلاً، لكنه يستوجب شجاعة مؤسسية.</strong>
         </p>
         <p>
-          <span className="article-hl">أولاً:</span> الاعتراف بالجراح قبل أي بناء{'\n'}
-          لا تجميل، لا تأجيل، لا خطاب رسمي فارغ.
-        </p>
-        <p>
-          <span className="article-hl">ثانياً:</span> وحدة خليجية حقيقية لا شكلية{'\n'}
-          توحد في الأمن، الاقتصاد، الموقف الخارجي.
-        </p>
-        <p>
-          <span className="article-hl">ثالثاً:</span> تمكين العقول المنتجة{'\n'}
-          الكفاءة والإخلاص فوق المحسوبية والواسطة.
-        </p>
-        <p>
-          <span className="article-hl">رابعاً:</span> قرارات بمنهجية لا بفردانية{'\n'}
-          مؤسسات حقيقية لا آراء شخصية.
+          <span className="article-hl">أولاً:</span> الاعتراف بالجرح قبل التجميل؛ فلا بناء يستقيم على
+          إنكارٍ طويل.{'\n'}
+          <span className="article-hl">ثانياً:</span> وحدة خليجية لا تُقاس بالبروتوكولات، بل بالتنسيق
+          في الأمن والاقتصاد والموقف الخارجي حين يقتضي الأمر.{'\n'}
+          <span className="article-hl">ثالثاً:</span> تمكين العقول المنتجة؛ لتكن الكفاءة والإخلاص
+          معياراً لا استثناءً.{'\n'}
+          <span className="article-hl">رابعاً:</span> قرارات بمنهجية وبأطر مؤسسية، لا باندفاعات فردية
+          تُسمّى «رؤية» من دون أدوات قياس.
         </p>
         <p className="article-divider">— — —</p>
         <p>
-          المنطقة تمر بـ <span className="article-danger">نقطة تحول تاريخية.</span>
-          {'\n'}
-          اللي يتحرك اليوم يبني.{'\n'}
-          اللي ينتظر — <span className="article-danger">يُبنى عليه.</span>
+          المنطقة تمرّ بـ<span className="article-danger"> نقطة تحول تاريخية</span>؛ من يتحرك اليوم
+          يضع حجراً في البناء، ومن يؤجل يجد نفسه أمام واقعٍ يُعاد ترتيبه دون مشاركته.{'\n'}
+          <span className="article-danger">ومن ينتظر طويلاً قد يكتشف أن غيره قد بُني عليه.</span>
         </p>
 
         <footer className="article-end">

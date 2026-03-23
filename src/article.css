@@ -11,6 +11,7 @@
   text-align: center;
   padding: 2.5rem 0 3rem;
   margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(142, 176, 212, 0.12);
 }
 
 @media (max-width: 640px) {
@@ -30,10 +31,11 @@
   inset: -20% -30% auto;
   height: min(420px, 70vw);
   background: radial-gradient(
-    ellipse 80% 60% at 50% 0%,
-    rgba(201, 168, 76, 0.18) 0%,
-    rgba(10, 10, 15, 0) 65%
-  );
+      ellipse 75% 55% at 50% 0%,
+      rgba(142, 176, 212, 0.14) 0%,
+      rgba(184, 160, 110, 0.07) 42%,
+      transparent 68%
+    );
   pointer-events: none;
   z-index: 0;
 }
@@ -41,6 +43,14 @@
 .article-hero > * {
   position: relative;
   z-index: 1;
+}
+
+.article-hero .article-meta {
+  color: rgba(142, 176, 212, 0.85);
+}
+
+.article-hero .article-meta-dot {
+  background: rgba(142, 176, 212, 0.45);
 }
 
 .article-kicker {
@@ -59,7 +69,7 @@
   letter-spacing: 0.12em;
   font-size: 0.8rem;
   font-weight: 500;
-  color: rgba(240, 237, 230, 0.75);
+  color: var(--trust);
 }
 
 .article-h1 {
@@ -156,10 +166,10 @@
   font-family: 'Tajawal', sans-serif;
   font-size: 0.95rem;
   letter-spacing: 0.2em;
-  color: var(--gray);
+  color: var(--trust);
   margin: 2.75rem 0 1.25rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+  border-bottom: 1px solid rgba(142, 176, 212, 0.22);
 }
 
 .article-section-title:first-of-type {
@@ -219,14 +229,14 @@
   height: 8px;
   border-radius: 50%;
   background: var(--red-soft);
-  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+  box-shadow: 0 0 0 3px rgba(196, 137, 122, 0.2);
 }
 
 .article-bridge {
   font-family: 'Tajawal', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: rgba(240, 237, 230, 0.88);
+  color: rgba(212, 196, 160, 0.95);
   margin: 2rem 0 0.75rem;
   line-height: 1.7;
 }
@@ -243,7 +253,7 @@
 
 .article-divider {
   text-align: center;
-  color: var(--gold);
+  color: rgba(184, 160, 110, 0.55);
   letter-spacing: 0.35em;
   font-size: 0.95rem;
   margin: 1.25rem 0 !important;
@@ -296,7 +306,7 @@
 .article-opening-lines {
   font-size: 1.35rem;
   line-height: 2.1;
-  color: var(--white);
+  color: rgba(235, 232, 225, 0.96);
   font-weight: 700;
   margin-bottom: 1.25rem;
   font-family: 'Amiri', serif;

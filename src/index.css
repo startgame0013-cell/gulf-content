@@ -1,14 +1,26 @@
 :root {
-  --gold: #c9a84c;
-  --gold-light: #e8c96a;
-  --dark: #0a0a0f;
-  --dark2: #111118;
-  --dark3: #1a1a24;
-  --red: #c0392b;
-  --red-soft: #e74c3c;
-  --white: #f0ede6;
-  --gray: #8a8a9a;
-  --accent-rgb: 201, 168, 76;
+  /*
+    سيكولوجيا الألوان للقراءة التحليلية الطويلة:
+    - أزرق داكن / كحلي للخلفية: تركيز، ثقة، عمق (أقل إجهاداً من الأسود الصافي)
+    - كريمي دافئ للنص: قراءة مريحة دون برد «الأبيض الصارخ»
+    - ذهبي متحفّظ: حكمة، تراث، وزن دون صراخ بصري
+    - أزرق رمادي (trust): معلومات، هدوء
+    - طوبي/تراكوتا للتحذير: خطر معتدل دون إنذار أحمر مُثير للذعر
+    - زيتوني خافت للتفاعل/التبويب: توازن، وضوح
+  */
+  --dark: #0a0e14;
+  --dark2: #0f141c;
+  --dark3: #151c26;
+  --white: #ebe8e1;
+  --gray: #8b929e;
+  --gold: #b8a06e;
+  --gold-light: #d4c4a0;
+  --trust: #8eb0d4;
+  --trust-dim: #6a8aad;
+  --red: #9a6b5c;
+  --red-soft: #c4897a;
+  --calm: #7a9e8f;
+  --accent-rgb: 184, 160, 110;
 }
 
 *,
@@ -20,7 +32,8 @@
 }
 
 body {
-  background: var(--dark);
+  background: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(110, 140, 180, 0.08), transparent 50%),
+    linear-gradient(180deg, #0a0e14 0%, #0c1018 100%);
   color: var(--white);
   font-family: 'Cairo', sans-serif;
   min-height: 100vh;
@@ -62,9 +75,10 @@ body {
 }
 
 .app-nav button.active {
-  background: #b4c4b8;
-  color: #0a0a0f;
-  border-color: #b4c4b8;
+  background: rgba(122, 158, 143, 0.28);
+  color: var(--white);
+  border-color: rgba(122, 158, 143, 0.55);
+  box-shadow: 0 0 24px rgba(122, 158, 143, 0.12);
 }
 
 .draft-intro {
@@ -108,7 +122,8 @@ body {
 .draft-field input:focus,
 .draft-field textarea:focus {
   outline: none;
-  border-color: rgba(var(--accent-rgb), 0.5);
+  border-color: rgba(142, 176, 212, 0.45);
+  box-shadow: 0 0 0 1px rgba(142, 176, 212, 0.12);
 }
 
 .draft-field textarea {
