@@ -1,6 +1,6 @@
 import './article.css'
 
-/** نفس نص السلسلة الذي أرسلته — داخل صفحة مقال تحريرية (بدون بطاقات POST / نسخ / عداد حروف). */
+/** المتن من «في قانون فيزيائي…» إلى «يُبنى عليه» — تحريري، دون ثريد ولا إشارة لسلسلة منشورات. */
 export function ArticleView() {
   return (
     <article className="article-page" dir="rtl" lang="ar">
@@ -26,7 +26,7 @@ export function ArticleView() {
         <div className="article-meta">
           <span className="article-meta-item">وقت القراءة ~ ٨ دقائق</span>
           <span className="article-meta-dot" aria-hidden />
-          <span className="article-meta-item">سلسلة رأي وتحليل</span>
+          <span className="article-meta-item">رأي وتحليل</span>
         </div>
       </header>
 
@@ -51,38 +51,43 @@ export function ArticleView() {
           <span className="article-danger">والنتيجة؟</span>
           {'\n'}
           نقطتان اليوم في <span className="article-danger">أسوأ أحوالهما</span> منذ تأسيس هذه الدول:
-          {'\n\n'}
-          🔴 الأمن{'\n'}
-          🔴 التدفق المالي
         </p>
+        <ul className="article-risk-points" aria-label="نقطتان محوريتان">
+          <li>الأمن</li>
+          <li>التدفق المالي</li>
+        </ul>
         <p className="article-divider">— — —</p>
-        <p>
-          في الجزء القادم أشرح <span className="article-hl">ليش وصلنا هنا.</span>
-        </p>
 
-        <h2 className="article-h2">
-          <span className="article-h2-num">١</span>
-          ليش وصلنا هنا؟
-        </h2>
+        <h2 className="article-section-title article-section-title--spaced">ليش وصلنا هنا؟</h2>
         <p>
           مو لأن عندنا نقص في المال أو الموارد.{'\n'}
           بالعكس — الخليج من أغنى مناطق العالم.
         </p>
-        <p>المشكلة الحقيقية:</p>
-        <p>
-          <span className="article-hl">١.</span> جيل قيادة فقد العمق الفكري والإداري تدريجياً{'\n'}
-          <span className="article-hl">٢.</span> قرارات تُتخذ بعاطفة ومصلحة آنية لا باستراتيجية{'\n'}
-          <span className="article-hl">٣.</span> ردود أفعال بدل مبادرات — نتحرك لما يضغط علينا أحد فقط{'\n'}
-          <span className="article-hl">٤.</span> مجلس تعاون موجود بالاسم، غايب بالفعل
-        </p>
+        <p className="article-bridge">المشكلة الحقيقية:</p>
+        <ul className="article-key-points">
+          <li>
+            <span className="article-li-num">١</span>
+            <span>جيل قيادة فقد العمق الفكري والإداري تدريجياً</span>
+          </li>
+          <li>
+            <span className="article-li-num">٢</span>
+            <span>قرارات تُتخذ بعاطفة ومصلحة آنية لا باستراتيجية</span>
+          </li>
+          <li>
+            <span className="article-li-num">٣</span>
+            <span>ردود أفعال بدل مبادرات — نتحرك لما يضغط علينا أحد فقط</span>
+          </li>
+          <li>
+            <span className="article-li-num">٤</span>
+            <span>مجلس تعاون موجود بالاسم، غايب بالفعل</span>
+          </li>
+        </ul>
         <p className="article-divider">— — —</p>
         <p>
           <span className="article-danger">الأخطر من كل هذا؟</span>
-          {'\n'}
-          في الجزء القادم.
         </p>
 
-        <h2 className="article-section-title">الأسباب الخفية</h2>
+        <h2 className="article-section-title article-section-title--spaced">الأسباب الخفية</h2>
         <p>
           <strong className="article-h2-inline">الأخطر: اللي يحدث للخليج مو صدفة.</strong>
         </p>
@@ -108,7 +113,7 @@ export function ArticleView() {
           <span className="article-danger">بينما الخطة تُنفَّذ.</span>
         </p>
 
-        <h2 className="article-section-title">النتائج إذا ما تحرك أحد</h2>
+        <h2 className="article-section-title article-section-title--spaced">النتائج إذا ما تحرك أحد</h2>
         <p>
           <strong className="article-h2-inline">شنو يحدث لو استمر الوضع على ما هو عليه؟</strong>
         </p>
@@ -130,7 +135,7 @@ export function ArticleView() {
           <span className="article-danger">الخيار الثاني: يُتخذ عنك.</span>
         </p>
 
-        <h2 className="article-section-title">الحل والمطلوب</h2>
+        <h2 className="article-section-title article-section-title--spaced">الحل والمطلوب</h2>
         <p>
           <strong className="article-h2-inline">الحل موجود — لكنه يحتاج شجاعة.</strong>
         </p>
@@ -158,62 +163,9 @@ export function ArticleView() {
           اللي ينتظر — <span className="article-danger">يُبنى عليه.</span>
         </p>
 
-        <h2 className="article-section-title">ثريد كامل — تويتر</h2>
-        <p className="article-thread-note">٦ تغريدات — جاهزة للنشر</p>
-
-        <p className="article-thread-heading">١/٦</p>
-        <p>
-          {`في قانون فيزيائي يقول: أي شيء تتركه بدون اهتمام يتحول من نظام إلى فوضى.
-
-هذا القانون يصف بالضبط ما يحدث في الخليج اليوم 🧵`}
-        </p>
-
-        <p className="article-thread-heading">٢/٦</p>
-        <p>
-          {`الأمن والاقتصاد — نقطتان في أسوأ أحوالهما منذ تأسيس دول الخليج.
-
-مو لأن تنقص الموارد.
-بل لأن القرار صار عاطفياً، والتخطيط صار غائباً، والتوحد صار شكلياً.`}
-        </p>
-
-        <p className="article-thread-heading">٣/٦</p>
-        <p>
-          {`الأخطر: ما يحدث مو صدفة.
-
-الانقسامات تُغذَّى، الخلافات تُشعَّل، والقيادات تُشغَل بالصغير بينما القرارات الكبيرة تُرسم في مكان آخر.
-
-الخليج يرد — ولا يبادر.`}
-        </p>
-
-        <p className="article-thread-heading">٤/٦</p>
-        <p>
-          {`النتيجة الحتمية إذا استمر الحال:
-
-المنتظر يضيع ← الخائف يدفع ثمن مخاوفه ← المتصارع يخرج خاسراً ← العاطفي يزيد الفوضى.
-
-هذه أنماط تتكرر في كل مجتمع بلا رؤية.`}
-        </p>
-
-        <p className="article-thread-heading">٥/٦</p>
-        <p>
-          {`الحل ليس مستحيلاً:
-
-✦ الاعتراف بالجراح أولاً
-✦ وحدة حقيقية لا بروتوكولات فارغة
-✦ تمكين الكفاءة فوق المحسوبية
-✦ قرارات بمنهجية لا بفردانية
-✦ الشعب شريك لا متفرج`}
-        </p>
-
-        <p className="article-thread-heading">٦/٦</p>
-        <p>
-          {`المنطقة تمر بنقطة تحول تاريخية.
-
-الخيار الأول: تتحرك اليوم وتبني.
-الخيار الثاني: يُتخذ عنك.
-
-نافذة الفرصة لا تنتظر.`}
-        </p>
+        <footer className="article-end">
+          <div className="article-end-line" aria-hidden />
+        </footer>
       </div>
     </article>
   )
