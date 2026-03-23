@@ -218,6 +218,41 @@
   margin-top: 0.06em;
 }
 
+.article-lead--no-drop::first-letter {
+  float: none;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.article-opening-lines {
+  font-size: 1.35rem;
+  line-height: 2.1;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  font-family: 'Amiri', serif;
+}
+
+.article-thread-heading {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.85rem;
+  color: var(--gold);
+  margin: 2rem 0 0.75rem;
+  font-weight: 700;
+}
+
+.article-thread-note {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(138, 138, 154, 0.9);
+  margin: 0 0 1.5rem;
+  text-align: right;
+}
+
 .article-h2 {
   font-family: 'Tajawal', sans-serif;
   font-size: 1.15rem;
