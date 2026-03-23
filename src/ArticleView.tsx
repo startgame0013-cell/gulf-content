@@ -1,6 +1,35 @@
+import { useEffect, useRef, useState } from 'react'
 import './article.css'
 
+
+
+type MusicMode = 'anthem' | 'off'
+
+const ANTHEM_VIDEO_ID = 'Ak4E66qtioU'
+const ANTHEM_EMBED_SRC = `https://www.youtube.com/embed/${ANTHEM_VIDEO_ID}?enablejsapi=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&playsinline=1&loop=1&playlist=${ANTHEM_VIDEO_ID}`
+
 export function ArticleView() {
+  const [musicMode, setMusicMode] = useState<MusicMode>('anthem')
+  const [isPlaying, setIsPlaying] = useState(false)
+  const iframeRef = useRef<HTMLIFrameElement | null>(null)
+
+  const sendYoutubeCommand = (func: string, args: number[] = []) => {
+    iframeRef.current?.contentWindow?.postMessage(
+      JSON.stringify({ event: 'command', func, args }),
+      '*'
+    )
+  }
+
+  useEffect(() => {
+    if (musicMode === 'off') {
+      sendYoutubeCommand('pauseVideo')
+      if (isPlaying) setIsPlaying(false)
+      return
+    }
+
+    sendYoutubeCommand('setVolume', [12])
+    sendYoutubeCommand(isPlaying ? 'playVideo' : 'pauseVideo')
+  }, [musicMode, isPlaying])
   return (
     <article className="article-page" dir="rtl" lang="ar">
       <header className="article-hero">
@@ -27,6 +56,46 @@ export function ArticleView() {
           <span className="article-meta-dot" aria-hidden />
           <span className="article-meta-item">رأي وتحليل</span>
         </div>
+
+        <p className="article-audio-note">اختر الخلفية الموسيقية للمقال إذا أردت أو أوقفها.</p>
+        <div className="article-audio-controls" role="group" aria-label="التحكم بالموسيقى">
+          <button
+            type="button"
+            className={musicMode === 'anthem' ? 'active' : ''}
+            onClick={() => setMusicMode('anthem')}
+          >
+            نشيد وطني
+          </button>
+          <button
+            type="button"
+            className={musicMode === 'off' ? 'active' : ''}
+            onClick={() => setMusicMode('off')}
+          >
+            إيقاف
+          </button>
+          <button
+            type="button"
+            disabled={musicMode === 'off'}
+            onClick={() => setIsPlaying((prev) => !prev)}
+          >
+            {isPlaying ? 'إيقاف التشغيل' : 'تشغيل'}
+          </button>
+        </div>
+
+        {musicMode === 'anthem' ? (
+          <iframe
+            ref={iframeRef}
+            className="article-audio-frame"
+            title="النشيد الوطني"
+            src={ANTHEM_EMBED_SRC}
+            allow="autoplay; encrypted-media"
+            onLoad={() => {
+              sendYoutubeCommand('setVolume', [12])
+              sendYoutubeCommand(isPlaying ? 'playVideo' : 'pauseVideo')
+            }}
+          />
+        ) : null}
+
       </header>
 
       <div className="article-body">
