@@ -114,7 +114,7 @@ export default function App() {
   const [tab, setTab] = useState<'article' | 'create'>('article')
 
   return (
-    <div className={tab === 'article' ? 'container container--article' : 'container'}>
+    <div className="container">
       <nav className="app-nav" aria-label="التنقل الرئيسي">
         <button type="button" className={tab === 'article' ? 'active' : ''} onClick={() => setTab('article')}>
           المقال
