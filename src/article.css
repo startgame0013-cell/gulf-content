@@ -13,6 +13,18 @@
   margin-bottom: 2.5rem;
 }
 
+@media (max-width: 640px) {
+  .article-hero {
+    padding: 1.25rem 0 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-lead {
+    margin-bottom: 2rem;
+    padding: 1.1rem 1rem 1.25rem;
+  }
+}
+
 .article-hero-glow {
   position: absolute;
   inset: -20% -30% auto;
